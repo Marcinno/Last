@@ -1,0 +1,65 @@
+﻿@model List<PwI.Domain.Entities.Car>
+@{
+    ViewBag.Title = "Home Page";
+}
+<p class="h1">Last! Rent us!!!!!</p>
+<div id ="pic">
+    <img class="img-responsive" src="/Source/logo.jpg"  alt="picture not found" height="200">    
+</div>
+
+<div class="container margin" id="description">
+    <p class="h1">DESCRIPTION:</p>
+</div>
+<div class="container-fluid margin2">
+    <p class="h1">  Last, it's a car rental with 50 years of tradition</p>
+    <p class="h1">  HERE:</p>
+    <p class="h3">*Can rent a car to travel around the Europe!</p>
+    <p class="h3">*Find some luxury car</p>
+    <p class="h3">*Get transport help</p>
+    <p class="h3">*Save yuor money!</p>
+    
+</div>
+<div class="container margin" id="carlist">
+    <div class="margin2">
+        <p class="h1">  Our cars!</p>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Mark</th>
+            <th scope="col">Model</th>
+            <th scope="col">Price/Day</th>
+            <th scope="col">Year</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @foreach (var p in Model)
+        {
+            <tr>
+
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Model</td>
+                <td>@p.price</td>
+                <td>@p.ProductionYear</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+<div class="row margin" id="contact">
+    <div class="margin2">
+        <p class="h1">Contact!</p>
+
+    </div>
+    <address>
+        Warsaw<br/>
+        Given Street 55<br/>
+        <abbr title="Phone">Phone:</abbr>
+        555 555 555
+    </address>
+    
+</div>
+<div class="margin"><p class="h1">CALL US! DO IT!</p></div>
